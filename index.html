@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+        }
+        @keyframes float{
+            0%{transform: translate(-5px)}
+            10%{transform: translate(-10px)}
+            20%{transform: translate(-20px)}
+            30%{transform: translate(-30px)}
+            40%{transform: translate(-40px)}
+            50%{transform: translate(-50px)}
+            60%{transform: translate(-60px)}
+            70%{transform: translate(-70px)}
+            80%{transform: translate(-80px)}
+            90%{transform: translate(-90px)}
+            100%{transform: translate(-100px)}
+        }
+        #dt{
+            clear: both;
+            width: 530px;
+            height: 565px;
+            float: right;
+            animation: float 3s linear  infinite alternate ;
+        }
+        #atk{
+            width: 1500px;
+            height: 800px;
+            margin: 0 auto;
+            background: url("atk.png") 100% 0% no-repeat;
+        }
+
+        #top li{
+            list-style: none;
+            float: left;
+            margin-right: 5px;
+        }
+        #top li p{
+            width: 50px;
+            height: 50px;
+            border-radius:50%;
+            background: radial-gradient(white,wheat);
+        }
+        #top h4{
+            float: right;
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        #top:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #money{
+            width: 110px;
+            float: right;
+        }
+        #money p{
+            float: right;
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            width: 110px;
+        }
+        #money:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #iq{
+            width: 500px;
+            height: 160px;
+            float: right;
+            clear: both;
+            background: rgba(197, 197, 197, 0.29);
+        }
+        #iq .num{
+            box-sizing: border-box;
+            width: 150px;
+            height: 107px;
+            margin: 15px 20px;
+            float: left;
+            clear: both;
+        }
+        #iq .num h1{
+            float: right;
+            font-size: 80px;
+            background: rgba(0, 0, 0, 0.09);
+            width: 150px;
+            height: 80px;
+            margin-bottom: 5px;
+            position: relative;
+            text-align: right;
+        }
+        #iq .num p{
+            box-sizing: border-box;
+            clear: both;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 150px;
+            height: 20px;
+            color: white;
+            font-size: 17px;
+
+        }
+        #iq .num2{
+            box-sizing: border-box;
+            width: 160px;
+            height: 107px;
+            float: left;
+            margin: 15px 0px;
+        }
+        #iq .num2 span{
+            width: 35px;
+            height: 25px;
+            display: block;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            margin-left: 7px;
+        }
+        #iq .num2 h1{
+            font-size: 43px;
+            font-weight: bolder;
+        }
+        #iq .num2 p{
+            font-size: 16px;
+            margin-left: 7px;
+            font-weight: 600;
+
+        }
+        .gy{
+            box-sizing: border-box;
+            width: 220px;
+            height: 120px;
+            background: rgba(197, 197, 197, 0.29);
+            float: right;
+            margin: 15px 1px;
+            margin-right: 15px;
+
+        }
+        .bd{
+            box-sizing: border-box;
+            width: 220px;
+            height: 120px;
+            background: rgba(197, 197, 197, 0.29);
+            float: right;
+            margin: 15px 11px;
+        }
+        .gy p,.bd p{
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 38px;
+            font-weight: bold;
+            float: left;
+            margin-top: 10px; ;
+            margin-left: 15px;
+            margin-bottom: 0px; ;
+        }
+        .gy .js{
+            width: 80px;
+            height: 20px;
+            line-height: 20px;
+            clear: both;
+            font-size: 18px;
+            color: gray;
+            margin-left: 18px;
+            margin-top: 0px;
+            }
+        #border{
+            clear: both;
+            float: right;
+            width: 265px;
+            height: 5px;
+            background: orangered;
+            margin-right: 20px;
+        }
+        .num h1 span{
+            display: inline-block;
+            border-radius:50%;
+            height: 25px;
+            width: 25px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 25px;
+            color: white;
+            background: rgba(0, 0, 0, 0.64);
+            font-weight: 500;
+            position: absolute;
+            left: -11px;
+            top: 31px;
+        }
+        #shadow{
+            clear: both;
+            box-sizing: border-box;
+            float: right;
+            width: 45px;
+            height: 120px;
+            background: rgba(0, 0, 0, 0.82);
+            margin: 15px 0px;
+        }
+        #blue{
+            clear: both;
+            width: 480px;
+            height: 100px;
+            float: right;
+            background: #10A6DC;
+            position: relative;
+        }
+        #blue li{
+            box-sizing: border-box;
+            list-style: none;
+            float: left;
+            width: 140px;
+            height: 100px;
+            text-align: left;
+            font-size: 28px;
+            line-height: 145px;
+            margin-left: 15px;
+            border-right: 1px groove #10A6DC;
+        }
+        #blue li:first-of-type{
+            box-sizing: border-box;
+            width: 150px;
+            height: 100px;
+            text-align: left;
+            font-size: 36px;
+            font-weight: bold;
+            border-right: 1px groove #10A6DC;;
+        }
+        #blue li a{
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+        #blue li:nth-of-type(3){
+            border: none;
+        }
+        .topborder{
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            position: absolute;
+            text-indent: 1em;
+            line-height: 33px;
+            top: 0px;
+            right: 3px;
+            width: 310px;
+            height: 33px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.82);
+        }
+    </style>
+</head>
+<body>
+    <div id="atk">
+        <div id="top">
+            <ul>
+                <li><p></p></li>
+                <li><p></p></li>
+                <li><p></p></li>
+                <li><p></p></li>
+            </ul>
+            <h4>2020/4/1&nbsp;23:35</h4>
+        </div>
+        <div id="money">
+            <p>42852&nbsp;73&nbsp;0</p>
+        </div>
+        <div id="dt" >
+            <div id="iq">
+                <div class="num">
+                    <h1><span>+</span>&nbsp;12</h1>
+                    <p> 理智/128</p>
+                </div>
+                <div class="num2">
+                    <h1>作战</h1>
+                    <span>当前</span>
+                    <p>全部完成</p>
+                </div>
+            </div>
+            <div id="border"></div>
+            <div id="shadow"></div>
+            <div class="gy">
+                <p>干员</p>
+                <div class="js">角色管理</div>
+            </div>
+            <div class="bd">
+                <p>编队</p>
+            </div>
+            <div id="blue">
+                <ul>
+                    <li><a href="">采购中心</a></li>
+                    <li><a href="">公开招募</a></li>
+                    <li><a href="">干员寻访</a></li>
+                </ul>
+                <div class="topborder">招募</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
