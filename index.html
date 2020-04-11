@@ -267,7 +267,7 @@
                 <li><p></p></li>
                 <li><p></p></li>
             </ul>
-            <h4>2020/4/1&nbsp;23:35</h4>
+            <h4 id="time"></h4>
         </div>
         <div id="money">
             <p>42852&nbsp;73&nbsp;0</p>
@@ -300,10 +300,55 @@
                     <li><a href="">干员寻访</a></li>
                 </ul>
                 <div class="topborder">招募</div>
-
             </div>
         </div>
 
     </div>
+    <script>
+        const time =document.getElementById('time');
+        var atk =document.getElementById('atk');
+        var dt=document.getElementById('dt');
+        function showTime(){
+            let today =new Date();
+            const hour =today.getHours();
+            year =today.getFullYear();
+            month =today.getMonth()+1;
+            day =today.getDate();
+            min =today.getMinutes();
+            sec =today.getSeconds();
+            time.innerHTML=year+'/'+month+'/'+day+'&nbsp;'+addZero(hour)+'<span>:</span>'+addZero(min)+'<span>:</span>'+addZero(sec);
+            setTimeout(showTime,1000);
+        }
+        function addZero(n){
+            return n <10 ?"0"+n :n;
+        }
+        function setBackg(){
+            let today =new Date();
+            hour =today.getHours();
+            if(hour>12){
+                atk.style.background='url(an.jpg) center center/cover no-repeat';
+            }
+        }
+        function yaya(){
+            var choice =parseInt(prompt("明天想去哪玩?","1.江边,2.公园,3.步行街.请选择:"));
+            if(choice==1){
+                document.write("<h1 style='text-align: center;color: #10A6DC'>你选择了去江边</h1>");
+                dt.style.display="none";
+
+                atk.style.background='url(cj.jpg) center center/cover no-repeat';
+            } if(choice==2){
+                document.write("<h1 style='text-align: center;color: #10A6DC'>你选择了去公园</h1>");
+                dt.style.display="none";
+                atk.style.background='url(cj2.jpg) center center/cover no-repeat';
+            }if(choice==3){
+                document.write("<h1 style='text-align: center;color: #10A6DC'>你选择了去步行街</h1>");
+                dt.style.display="none";
+                atk.style.background='url(cj1.jpg) center center/cover no-repeat';
+            }
+        }
+        showTime();
+        setBackg();
+        yaya();
+    </script>
 </body>
 </html>
